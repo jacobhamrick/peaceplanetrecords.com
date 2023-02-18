@@ -1,85 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 $main-font: "Roboto", sans-serif;
+$font-color: #fffdef;
+$background-color: #202020;
 
 html {
   height: 100%;
 }
 
 body {
-  margin: 20px 60px;
-  min-height: 100%;
-  background: #202020;
+  height: 100%;
+  background: $background-color;
+  color: $font-color;
 }
 
 .bold {
   font-weight: bold;
 }
 
-p {
+p,
+a {
   font-family: $main-font;
   margin: 0;
-  color: #fffdef;
+  color: $font-color;
 }
 
 a {
   text-decoration: none;
-  color: #fffdef;
+  color: $font-color;
 }
 
-.header {
+.navbar {
   grid-area: header;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 3rem;
-  .header-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    .header-link {
-      font-size: 46px;
-      text-transform: uppercase;
-      line-height: 46px;
-      height: 84px;
-    }
+  .nav-link {
+    color: $font-color;
+    text-transform: uppercase;
+  }
+
+  .nav-link.active {
+    color: $font-color;
+    text-decoration: underline;
   }
 }
 
-.main {
-  grid-area: main;
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-}
-
-.footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  .footer-col {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-    .footer-icon {
-      font-size: 22px;
-    }
-  }
-}
-
-.brand-text {
-  font-size: 30px;
-  height: 100%;
-  line-height: 58px;
+.navbar-brand {
   text-transform: uppercase;
+  color: $font-color;
+}
+
+.fa-bars {
+  color: $font-color;
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .main-video {
-  width: auto;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 40%;
   margin: auto;
 }
 
@@ -89,80 +69,10 @@ a {
   flex-direction: column;
 }
 
-.grid-wrap {
-  display: grid;
-  grid-template-rows: 360px auto 60px;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-
-@media (min-width: 829px) and (min-height: 450px) {
-  body {
-    margin: 0 60px;
-  }
-
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0;
-    .header-col {
-      flex-direction: row;
-      align-items: flex-end;
-      .header-link {
-        font-size: 16px;
-        line-height: 16px;
-        height: 42px;
-      }
-    }
-  }
-
-  .main {
-    grid-area: main;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-  }
-
-  .footer {
-    grid-area: footer;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .footer-col {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 1rem;
-      .footer-icon {
-        font-size: 22px;
-      }
-    }
-  }
-
-  .grid-wrap {
-    grid-template-rows: 60px auto 40px;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-
-  .brand-text {
-    font-size: 40px;
-    height: 42px;
-    text-transform: uppercase;
-  }
-
+@media (min-width: 622px) and (min-height: 450px) {
   .main-video {
     width: 66%;
     height: 66%;
-  }
-
-  .about {
-    justify-content: flex-start;
-    padding: 40px 0;
-    flex-direction: column;
+    margin: auto;
   }
 }
