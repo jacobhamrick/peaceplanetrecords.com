@@ -1,24 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap");
 html {
   height: 100%; }
 
 body {
   height: 100%;
   background: #121212;
-  color: #fffdef; }
+  color: #fffdef;
+  font-family: "Space Grotesk", sans-serif; }
 
 .bold {
   font-weight: bold; }
 
 p,
 a {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   color: #fffdef; }
 
 a {
   text-decoration: none;
-  color: #fffdef; }
+  color: #fffdef;
+  transition: 0.6s all; }
+
+a:hover {
+  color: #f24398;
+  transition: 0.6s all; }
 
 .main-text {
   font-size: 14px; }
@@ -50,10 +55,12 @@ a {
   color: #fffdef; }
 
 .fa-bars {
-  color: #fffdef; }
+  color: #fffdef;
+  transition: 0.6s all; }
 
 .fa-brands:hover {
-  color: #f24398; }
+  color: #f24398;
+  transition: 0.6s all; }
 
 .navbar-toggler {
   border: none; }
@@ -61,8 +68,7 @@ a {
 .main-video {
   display: block;
   width: 100%;
-  height: 40%;
-  margin: auto; }
+  height: 40%; }
 
 .about {
   justify-content: flex-start;
