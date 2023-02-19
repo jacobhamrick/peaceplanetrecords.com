@@ -2,7 +2,7 @@
 
 $main-font: "Roboto", sans-serif;
 $font-color: #fffdef;
-$background-color: #202020;
+$background-color: #121212;
 
 html {
   height: 100%;
@@ -30,6 +30,16 @@ a {
   color: $font-color;
 }
 
+.main-text {
+  font-size: 14px;
+}
+
+.navbar-brand:active,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #9df9b6;
+}
+
 .navbar {
   grid-area: header;
   .nav-link {
@@ -43,6 +53,16 @@ a {
   }
 }
 
+.nav-link:active,
+.nav-link:hover,
+.navlink:focus {
+  color: #f24398;
+}
+
+.nav-link.active:hover {
+  color: #f24398;
+}
+
 .navbar-brand {
   text-transform: uppercase;
   color: $font-color;
@@ -50,6 +70,10 @@ a {
 
 .fa-bars {
   color: $font-color;
+}
+
+.fa-brands:hover {
+  color: #f24398;
 }
 
 .navbar-toggler {
@@ -71,8 +95,8 @@ a {
 
 @media (min-width: 622px) and (min-height: 450px) {
   .main-video {
-    width: 66%;
-    height: 66%;
-    margin: auto;
+    width: 666.66px;
+    min-height: 380px;
+    margin: 1rem auto;
   }
 }
