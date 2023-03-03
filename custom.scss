@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap");
 
 $main-font: "Space Grotesk", sans-serif;
 $font-color: #fffdef;
@@ -27,7 +27,7 @@ a {
 
 a {
   text-decoration: none;
-  color: $font-color;
+  color: #40ef6f;
   transition: 0.6s all;
 }
 
@@ -43,13 +43,14 @@ a:hover {
 .navbar-brand:active,
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #9df9b6;
+  color: #40ef6f;
 }
 
 .navbar {
   grid-area: header;
   .nav-link {
     color: $font-color;
+    font-weight: 500;
     text-transform: uppercase;
   }
 
@@ -90,9 +91,7 @@ a:hover {
 
 .main-video {
   display: block;
-  width: 100%;
-  height: 40%;
-  // margin: auto;
+  margin: auto;
 }
 
 .about {
@@ -101,10 +100,15 @@ a:hover {
   flex-direction: column;
 }
 
+.iframe-div {
+  width: 100%;
+}
+
 @media (min-width: 622px) and (min-height: 450px) {
-  .main-video {
-    width: 666.66px;
-    min-height: 380px;
+  .iframe-div {
+    position: relative;
+    width: 66%;
     margin: 1rem auto;
+    max-width: 800px;
   }
 }
